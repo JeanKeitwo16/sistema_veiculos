@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($resultado) {
         $_SESSION['message'] = "Veículo cadastrado com sucesso!";
         $_SESSION['message_type'] = "success";
-        header("Location: listar.php");
+        header("Location: ../index.php");
     } else {
         $_SESSION['message'] = "Erro ao cadastrar veículo.";
         $_SESSION['message_type'] = "error";

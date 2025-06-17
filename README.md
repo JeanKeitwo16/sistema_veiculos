@@ -27,3 +27,14 @@ CREATE TABLE veiculo (
   INDEX (id_categoria),
   FOREIGN KEY (id_categoria) REFERENCES categoria(id)
 );
+
+INSERT INTO `usuario`(`nome`, `email`, `senha`) VALUES ('admin','admin@gmail.com','admin')
+INSERT INTO `veiculo` (`placa`, `cor`, `modelo`, `marca`, `ano`, `id_categoria`, `imagem`) VALUES
+('ABC1D23', 'Vermelho', 'Actros 2651', 'Mercedes-Benz', 2022, 1, 'img1.jpg'),
+('DEF2E34', 'Prata', 'F-4000', 'Ford', 2021, 2, 'img2.jpg'),
+('GHI3F45', 'Preto', 'Hilux SRX', 'Toyota', 2023, 2, 'img3.jpg'),
+('JKL4G56', 'Branco', 'Renegade Longitude', 'Jeep', 2020, 3, 'img4.jpg'),
+('MNO5H67', 'Cinza', 'HR-V Touring', 'Honda', 2022, 3, 'img5.jpg'),
+('PQR6I78', 'Azul', 'Corolla GLi', 'Toyota', 2021, 4, 'img6.jpg'),
+('STU7J89', 'Verde', 'Onix Plus', 'Chevrolet', 2020, 4, 'img7.jpg'),
+('VWX8K90', 'Amarelo', 'Axor 3344', 'Mercedes-Benz', 2023, 1, 'img8.jpg');

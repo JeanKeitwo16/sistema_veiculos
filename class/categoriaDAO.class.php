@@ -10,7 +10,7 @@ class categoriaDAO{
     }
     public function inserir(categoria $obj){
         $sql = $this->conexao->prepare(
-            "INSERT INTO usuario (nome)
+            "INSERT INTO categoria (nome)
             VALUES (:nome)"
         );
         $sql->bindValue(":nome", $obj->getNome());

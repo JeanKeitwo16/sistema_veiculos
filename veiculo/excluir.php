@@ -5,7 +5,7 @@ $id = $_GET["id"];
 $objDAO = new veiculoDAO();
 $retorno = $objDAO->delete($id);
 if ($retorno)
-    header("location:listar.php?deleteOk");
+    header("location:../index.php?deleteOk");
 else
-    header("location:listar.php?deleteN");
+    header("location:../index.php?deleteN");
 ?>

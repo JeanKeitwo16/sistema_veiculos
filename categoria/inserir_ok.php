@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($resultado) {
         $_SESSION['message'] = "Categoria cadastrada com sucesso!";
         $_SESSION['message_type'] = "success";
-        header("Location: listar.php");
+        header("Location: ../index.php");
     } else {
         $_SESSION['message'] = "Erro ao cadastrar categoria.";
         $_SESSION['message_type'] = "error";

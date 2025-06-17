@@ -170,71 +170,96 @@ body {
 }
 
 /* Tabela de veículos */
+/* ==============================
+   Estilo Unificado para Tabelas
+   ============================== */
 .vehicles-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: white;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  overflow: hidden;
 }
 
-.vehicles-table th {
-    background-color: var(--primary-color);
-    color: white;
-    text-align: left;
-    padding: 15px;
-    font-weight: 600;
-}
-
+.vehicles-table th,
 .vehicles-table td {
-    padding: 12px 15px;
-    border-bottom: 1px solid var(--gray-medium);
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.vehicles-table thead th {
+  background-color: #4CAF50;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.vehicles-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
 }
 
 .vehicles-table tbody tr:hover {
-    background-color: var(--gray-light);
+  background-color: #f1f1f1;
 }
 
+/* Estilo para imagens dos veículos */
 .vehicle-image {
-    max-width: 120px;
-    height: auto;
-    border-radius: 4px;
-    display: block;
+  max-width: 80px;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid #ddd;
 }
 
-.actions-cell {
-    display: flex;
-    gap: 10px;
+/* Espaçamento entre botões de ação */
+.actions-cell .action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;                /* largura fixa */
+  height: 32px;               /* altura fixa */
+  padding: 0;
+  font-size: 18px;            /* tamanho do ícone */
+  border-radius: 4px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
+/* Botões padrão (você pode ajustar depois para o estilo dos botões do seu site) */
 .action-button {
-    padding: 6px 12px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 0.85rem;
-    transition: all 0.3s ease;
-}
-
-.action-button.view {
-    background-color: var(--secondary-color);
-    color: white;
+  padding: 6px 12px;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .action-button.edit {
-    background-color: var(--warning-color);
-    color: white;
+  background-color: #2196F3;
 }
 
 .action-button.delete {
-    background-color: var(--accent-color);
-    color: white;
+  background-color: #f44336;
+}
+
+.action-button.view {
+  background-color: #00bcd4;
 }
 
 .action-button:hover {
-    opacity: 0.9;
-    transform: translateY(-2px);
+  opacity: 0.9;
 }
+
 
 /* Botão Sair */
 .logout-button {
